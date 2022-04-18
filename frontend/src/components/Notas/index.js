@@ -1,13 +1,13 @@
 import React from 'react';
 
-export const Notas = () => {
+export const Notas = ({ data }) => {
   return (
     <li className='notepad-infos'>
       <div>
-        <strong>Fazer compras</strong>
+        <strong>{data.title}</strong>
         <div>x</div>
       </div>
-      <textarea>Lores Ipsum is simply </textarea>
+      <textarea defaultValue={data.notes} />
       <span>!</span>
     </li>
   );
